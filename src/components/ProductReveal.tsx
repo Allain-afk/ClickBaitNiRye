@@ -30,15 +30,15 @@ export function ProductReveal() {
           </motion.div>
 
           <h2 className="mb-6">
-            <span className="block text-gray-800">Introducing</span>
+            <span className="block text-gray-800">Introducing:</span>
             <span className="block bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-              GraceGlow Soap
+              GraceGlow Soap 🧼✨
             </span>
           </h2>
 
           <p className="text-gray-700 mb-12 max-w-2xl mx-auto">
-            The game-changing skincare solution that's been taking campuses by storm.
-            It's not magic — it's just that good.
+            The soap everyone is OBSESSED with! Simple. Effective. STUDENT-APPROVED.
+            A glow you can actually FEEL! 💯
           </p>
         </motion.div>
 
@@ -67,9 +67,9 @@ export function ProductReveal() {
           className="grid md:grid-cols-3 gap-4"
         >
           {[
-            { title: "Gentle on Skin", desc: "No harsh chemicals, just pure care" },
-            { title: "Fresh & Clean", desc: "Feel the difference instantly" },
-            { title: "Budget-Friendly", desc: "Quality that doesn't break the bank" },
+            { title: "Gentle on Skin", desc: "No harsh chemicals! Made to be gentle so you can use it every single day." },
+            { title: "Fresh & Clean Feeling", desc: "That CLEAN feeling that lasts ALL DAY. You'll know the difference immediately!" },
+            { title: "Budget-Friendly", desc: "Only ₱560! High-quality skincare that doesn't break the bank. Finally!" },
           ].map((item, index) => (
             <motion.div
               key={index}

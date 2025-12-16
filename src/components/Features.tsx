@@ -10,17 +10,17 @@ export function Features() {
     {
       icon: Zap,
       title: "Simple But Effective",
-      description: "No complicated 10-step routines. Just wash, rinse, and glow. It's skincare made easy for your busy student life."
+      description: "No complicated routines. No expensive products. Just one soap that WORKS. Simple = BETTER!"
     },
     {
       icon: Award,
       title: "Student-Approved",
-      description: "Tested and loved by thousands of students who understand the struggle of looking fresh on a budget."
+      description: "Students are going CRAZY for this! Check TikTok, Instagram, anywhere - everyone is talking about it!"
     },
     {
       icon: Heart,
       title: "A Glow You Can Feel",
-      description: "Not just visible results — you'll actually feel the difference. Your skin will thank you with every wash."
+      description: "You'll FEEL the difference from day one. Clean skin. Fresh feeling. That GLOW everyone's asking about!"
     }
   ];
 
@@ -40,13 +40,12 @@ export function Features() {
           <h2 className="mb-6">
             Why GraceGlow Soap
             <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Stands Out
+              Stands Out! 🌟
             </span>
           </h2>
 
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We could throw fancy ingredients at you, but here's what really matters:
-            real results that you can see and feel.
+            It's not complicated. It just WORKS. Here's why everyone is switching:
           </p>
         </motion.div>
 

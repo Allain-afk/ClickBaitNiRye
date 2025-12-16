@@ -23,13 +23,13 @@ export function Warning({ className = "" }: { className?: string }) {
                 </div>
                 <div>
                   <h2 className="text-gray-900 mb-4">
-                    🚨 URGENT WARNING 🚨
+                    ⚠️ WARNING: READ THIS! ⚠️
                   </h2>
                   <p className="text-red-700 mb-4">
                     ATTENTION: These "side effects" are NOT what you think...
                   </p>
                   <p className="text-gray-700 mb-4">
-                    Users report UNCONTROLLABLE effects including:
+                    Users are reporting UNEXPECTED effects:
                   </p>
                 </div>
               </div>
@@ -43,11 +43,11 @@ export function Warning({ className = "" }: { className?: string }) {
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <MessageCircle className="w-6 h-6 text-red-600" />
-                    <p className="text-red-900">CONSTANT Compliments</p>
+                    <p className="text-red-900">People Will Ask Questions</p>
                   </div>
                   <p className="text-gray-700">
-                    "What are you using?!" "You're GLOWING!" "Tell me your secret!" 
-                    — Prepare for DAILY questions 😱
+                    "What are you using?!" Get ready for friends, classmates, 
+                    even strangers asking about your glow! 😱
                   </p>
                 </motion.div>
 
@@ -59,11 +59,11 @@ export function Warning({ className = "" }: { className?: string }) {
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <TrendingUp className="w-6 h-6 text-purple-600" />
-                    <p className="text-purple-900">EXTREME Confidence</p>
+                    <p className="text-purple-900">Confidence Boost INCLUDED</p>
                   </div>
                   <p className="text-gray-700">
-                    Walking into class feeling like THAT person? 
-                    It's not a choice, it's AUTOMATIC! 💯
+                    Clean, glowing skin = instant confidence! 
+                    Feel amazing every single day! 💯
                   </p>
                 </motion.div>
               </div>
@@ -78,9 +78,9 @@ export function Warning({ className = "" }: { className?: string }) {
                   💬 REAL USER CONFESSION:
                 </p>
                 <p className="text-gray-800 italic">
-                  "My roommate BEGGED me to share. I had to buy a second one just so she'd stop asking. 
-                  Now we're BOTH getting compliments non-stop! This is actually INSANE!" 
-                  <span className="block mt-2 not-italic text-red-600">- Alex, 20 (Verified Purchase)</span>
+                  "My roommate bought it first and I made fun of her. Then I tried it. 
+                  Now I have my OWN and I use it EVERY DAY. The glow is REAL!" 
+                  <span className="block mt-2 not-italic text-red-600">- Sarah, 21 (Verified Purchase)</span>
                 </p>
               </motion.div>
 

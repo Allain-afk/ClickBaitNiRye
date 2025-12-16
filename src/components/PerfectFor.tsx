@@ -10,19 +10,19 @@ export function PerfectFor({ className = "" }: { className?: string }) {
     {
       icon: Sun,
       title: "Daily Skincare Routine",
-      description: "Start and end your day right. GraceGlow fits perfectly into any routine, whether you have 30 seconds or 30 minutes.",
+      description: "Made for everyday use! Whether you shower in the morning or at night, GraceGlow fits perfectly into your routine.",
       color: "from-yellow-400 to-orange-400"
     },
     {
       icon: Book,
       title: "Busy Students",
-      description: "Between classes, assignments, and social life, you need something that works fast. No fuss, no hassle, just results.",
+      description: "No time for complicated routines? This is SIMPLE but EFFECTIVE. Clean, glowing skin without the hassle!",
       color: "from-blue-400 to-purple-400"
     },
     {
       icon: Sparkles,
-      title: "Clean, Glowing Skin",
-      description: "For anyone who wants to look good and feel confident without spending a fortune or hours in front of the mirror.",
+      title: "Anyone Who Wants Clean, Glowing Skin",
+      description: "Seriously, ANYONE! Budget-friendly, gentle on skin, and a fresh, clean feeling you can actually FEEL.",
       color: "from-pink-400 to-purple-400"
     }
   ];
@@ -41,9 +41,9 @@ export function PerfectFor({ className = "" }: { className?: string }) {
           </div>
           
           <h2 className="mb-6">
-            <span className="block text-gray-800">Perfect For</span>
+            <span className="block text-gray-800">Who Is This For?</span>
             <span className="block bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
-              Everyone
+              Everyone! (But Especially...)
             </span>
           </h2>
 

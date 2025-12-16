@@ -70,27 +70,27 @@ export function ClickbaitTeaser({ className = "" }: { className?: string }) {
           </div>
           
           <h2 className="mb-6">
-            <span className="block text-gray-800">Why Are Celebrities Buying</span>
+            <span className="block text-gray-800">Everyone Is Asking:</span>
             <span className="block bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
-              THIS in Bulk?! 🤯
+              "What SOAP Are You Using?!" 🧼✨
             </span>
           </h2>
 
           <p className="text-gray-600 max-w-2xl mx-auto mb-8">
             <span className="block mb-4 text-red-600">
-              ⚠️ WARNING: Big skincare companies are trying to BAN this! ⚠️
+              🔥 VIRAL ALERT: This Is TAKING OVER Social Media! 🔥
             </span>
-            Industry insiders are PANICKING because students discovered this 
-            ONE SIMPLE SECRET that could put luxury brands out of business...
+            GraceGlow Soap is the budget-friendly secret students don't want you to know about!
+            Simple. Effective. RESULTS you can SEE and FEEL!
           </p>
 
           <div className="bg-gradient-to-r from-yellow-100 to-orange-100 p-6 rounded-2xl mb-8 border-2 border-yellow-300">
             <div className="flex items-start gap-3 mb-4">
               <AlertCircle className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" />
               <p className="text-gray-800 italic">
-                "I spent $500/month on skincare. Then I tried THIS and threw everything away. 
-                My dermatologist asked ME for advice!" 
-                <span className="block mt-2 not-italic">- Jessica M., verified buyer</span>
+                "I tried it as a JOKE and now I can't stop using it! People keep asking me 
+                what I'm using. My skin has NEVER felt this good!" 
+                <span className="block mt-2 not-italic">- Maria S., verified buyer</span>
               </p>
             </div>
           </div>

@@ -25,15 +25,16 @@ export function CTA() {
           <h2 className="mb-6">
             <span className="block text-red-600">DON'T Miss Out!</span>
             <span className="block bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-              Join 47,000+ Students Who Already Know The Secret!
+              Join THOUSANDS Who Already Have That GLOW! ✨
             </span>
           </h2>
 
           <p className="text-gray-700 mb-4 max-w-2xl mx-auto">
             <span className="block mb-2 text-red-600">
-              🚨 THIS DEAL EXPIRES IN MINUTES! 🚨
+              🔥 SELLING OUT FAST! 🔥
             </span>
-            Don't let your friends find out about this before you do...
+            Everyone is buying this RIGHT NOW. Your friends probably already have it.
+            Don't be the last one! 😱
           </p>
 
           <motion.div
@@ -61,10 +62,10 @@ export function CTA() {
               className="absolute top-0 left-0 w-full h-full bg-white opacity-10"
               style={{ transform: 'skewX(-20deg)' }}
             />
-            <p className="mb-2 relative z-10">GraceGlow Soap - LIMITED EDITION</p>
+            <p className="mb-2 relative z-10">🧼 GraceGlow Soap - VIRAL EDITION 🧼</p>
             <div className="flex items-center justify-center gap-4 mb-4 relative z-10">
-              <span className="text-white/70 line-through">$29.99</span>
-              <p className="text-white">$9.99</p>
+              <span className="text-white/70 line-through">₱1,680</span>
+              <p className="text-white">₱560</p>
               <span className="bg-red-600 px-3 py-1 rounded-full text-white animate-pulse">
                 67% OFF!
               </span>

@@ -51,9 +51,9 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-6 max-w-3xl mx-auto"
         >
-          <span className="block text-red-600 mb-2">DOCTORS HATE This!</span>
+          <span className="block text-red-600 mb-2">🚨 TRENDING NOW! 🚨</span>
           <span className="block bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
-            One SIMPLE TRICK for Perfect Skin That Big Beauty Brands Are HIDING!
+            This ₱560 Soap Is Changing EVERYONE'S Glow Game!
           </span>
         </motion.h1>
 
@@ -63,8 +63,8 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-gray-700 mb-4 max-w-xl mx-auto"
         >
-          A college student accidentally discovered this secret and now
-          EVERYONE is copying her...
+          Students are going CRAZY for this! Influencers WON'T STOP talking about it.
+          Your feed is FULL of people asking "What soap do you use?!"
         </motion.p>
 
         <motion.div
@@ -74,7 +74,7 @@ export function Hero() {
           className="bg-yellow-100 border-2 border-yellow-400 px-6 py-3 rounded-lg mb-8 inline-block"
         >
           <p className="text-gray-900">
-            😱 What happens next will SHOCK you! 😱
+            😱 You WON'T Believe What Happens Next! 😱
           </p>
         </motion.div>
 
@@ -84,13 +84,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex items-center justify-center gap-3 text-pink-600"
         >
-          <span>Click NOW before this gets taken down</span>
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          >
-            <ChevronDown size={24} />
-          </motion.div>
+          <span className="font-bold">⚠️ Click NOW Before We RUN OUT! ⚠️</span>
         </motion.div>
       </motion.div>
     </section>
