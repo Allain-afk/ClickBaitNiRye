@@ -84,7 +84,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex items-center justify-center gap-3 text-pink-600"
         >
-          <span>Scroll NOW before this gets taken down</span>
+          <span>Click NOW before this gets taken down</span>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}

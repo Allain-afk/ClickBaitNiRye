@@ -3,7 +3,7 @@ import { useInView } from './hooks/useInView';
 import { Star, TrendingUp, Users, Sparkles, Clock, AlertCircle } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-export function ClickbaitTeaser() {
+export function ClickbaitTeaser({ className = "" }: { className?: string }) {
   const [ref, isInView] = useInView({ threshold: 0.3 });
   const [timeLeft, setTimeLeft] = useState({ minutes: 14, seconds: 59 });
 
@@ -31,7 +31,7 @@ export function ClickbaitTeaser() {
   ];
 
   return (
-    <section ref={ref} className="py-20 px-4 bg-white">
+    <section ref={ref} className={`py-20 px-4 bg-white ${className}`}>
       <div className="max-w-4xl mx-auto">
         {/* Countdown Timer */}
         <motion.div

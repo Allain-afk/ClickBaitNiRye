@@ -3,11 +3,11 @@ import { useInView } from './hooks/useInView';
 import { AlertTriangle, MessageCircle, TrendingUp } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-export function Warning() {
+export function Warning({ className = "" }: { className?: string }) {
   const [ref, isInView] = useInView({ threshold: 0.3 });
 
   return (
-    <section ref={ref} className="py-20 px-4 bg-gradient-to-b from-blue-50 to-pink-50">
+    <section ref={ref} className={`py-20 px-4 bg-gradient-to-b from-blue-50 to-pink-50 ${className}`}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}

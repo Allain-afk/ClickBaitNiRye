@@ -3,7 +3,7 @@ import { useInView } from './hooks/useInView';
 import { Sun, Book, Sparkles } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-export function PerfectFor() {
+export function PerfectFor({ className = "" }: { className?: string }) {
   const [ref, isInView] = useInView({ threshold: 0.3 });
 
   const perfectFor = [
@@ -28,7 +28,7 @@ export function PerfectFor() {
   ];
 
   return (
-    <section ref={ref} className="py-20 px-4 bg-white">
+    <section ref={ref} className={`py-20 px-4 bg-white ${className}`}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
