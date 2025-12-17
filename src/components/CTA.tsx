@@ -1,9 +1,58 @@
 import { motion } from 'motion/react';
 import { useInView } from './hooks/useInView';
 import { ArrowRight, Shield, Truck, Star } from 'lucide-react';
+import { useState } from 'react';
+import confetti from 'canvas-confetti';
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from './ui/alert-dialog';
+import { Button } from './ui/button';
 
 export function CTA() {
   const [ref, isInView] = useInView({ threshold: 0.3 });
+  const [showThankYou, setShowThankYou] = useState(false);
+
+  const handleClaim = () => {
+    // Play success sound
+    const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3');
+    audio.volume = 0.5;
+    audio.play().catch(err => console.log('Audio play failed:', err));
+
+    // Trigger confetti
+    const duration = 3000;
+    const end = Date.now() + duration;
+
+    const colors = ['#ec4899', '#a855f7', '#3b82f6', '#eab308'];
+
+    (function frame() {
+      confetti({
+        particleCount: 3,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 },
+        colors: colors
+      });
+      confetti({
+        particleCount: 3,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 },
+        colors: colors
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    }());
+
+    // Show thank you modal
+    setShowThankYou(true);
+  };
 
   return (
     <section ref={ref} className="py-20 px-4 bg-gradient-to-b from-white via-pink-50 to-purple-100">
@@ -114,6 +163,7 @@ export function CTA() {
               whileTap={{ scale: 0.98 }}
               animate={{ boxShadow: ['0px 0px 0px rgba(236, 72, 153, 0)', '0px 0px 30px rgba(236, 72, 153, 0.5)', '0px 0px 0px rgba(236, 72, 153, 0)'] }}
               transition={{ duration: 2, repeat: Infinity }}
+              onClick={handleClaim}
               className="w-full bg-gradient-to-r from-pink-600 to-purple-600 text-white py-5 px-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow flex items-center justify-center gap-2 group"
             >
               <span>🔥 CLAIM YOUR GRACEGLOW NOW! 🔥</span>
@@ -168,6 +218,28 @@ export function CTA() {
           </p>
         </motion.div>
       </div>
-    </section>
+      {/* Thank You Modal */}
+      <AlertDialog open={showThankYou} onOpenChange={setShowThankYou}>
+        <AlertDialogContent className="bg-white border-4 border-pink-500 max-w-md">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="text-3xl text-center bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+              🎉 Thank You For Your Purchase! 🎉
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-center text-lg pt-4 space-y-3">
+              <p className="text-gray-700">Your GraceGlow Soap is on its way! ✨</p>
+              <p className="text-pink-600 font-semibold">You're about to join 47,328+ glowing students! 💖</p>
+              <p className="text-sm text-gray-600">Check your email for order confirmation and tracking details.</p>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter className="sm:justify-center">
+            <Button
+              onClick={() => setShowThankYou(false)}
+              className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-6 text-lg font-bold"
+            >
+              🧼 Continue Glowing! ✨
+            </Button>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>    </section>
   );
 }

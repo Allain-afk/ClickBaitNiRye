@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { useInView } from './hooks/useInView';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Check, Zap, Heart, Award } from 'lucide-react';
+import productImage from '../assets/9ca4832224c4b23f126575820577c1e45b00d6b0.png';
 
 export function Features() {
   const [ref, isInView] = useInView({ threshold: 0.2 });
@@ -76,11 +77,11 @@ export function Features() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="grid md:grid-cols-2 gap-6 items-center"
         >
-          <div className="rounded-2xl overflow-hidden shadow-xl">
-            <ImageWithFallback
-              src="https://images.unsplash.com/photo-1732861612298-969e145fc4b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG93aW5nJTIwc2tpbiUyMGNhcmV8ZW58MXx8fHwxNzY1ODk3NjMzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Glowing healthy skin"
-              className="w-full h-80 object-cover"
+          <div className="rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-pink-100 to-purple-100 p-8">
+            <img
+              src={productImage}
+              alt="GraceGlow Soap - Natural Pink Soap Bars"
+              className="w-full h-auto object-contain max-h-80"
             />
           </div>
 
