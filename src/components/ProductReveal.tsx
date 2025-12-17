@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { useInView } from './hooks/useInView';
 import { Sparkles } from 'lucide-react';
-import productImage from 'figma:asset/9ca4832224c4b23f126575820577c1e45b00d6b0.png';
+import productImage from '../assets/9ca4832224c4b23f126575820577c1e45b00d6b0.png';
 
 export function ProductReveal() {
   const [ref, isInView] = useInView({ threshold: 0.3 });
@@ -50,11 +50,11 @@ export function ProductReveal() {
           className="relative mb-16"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-purple-400 rounded-3xl blur-2xl opacity-20 transform scale-95"></div>
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-[#f5eee8]">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-pink-100 to-purple-100 p-8">
             <img
               src={productImage}
               alt="GraceGlow Soap - Natural Pink Soap Bars"
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain mx-auto max-h-[500px]"
             />
           </div>
         </motion.div>

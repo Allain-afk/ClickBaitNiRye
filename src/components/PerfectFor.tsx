@@ -1,9 +1,10 @@
 import { motion } from 'motion/react';
 import { useInView } from './hooks/useInView';
-import { Sun, Book, Sparkles } from 'lucide-react';
+import { Sun, Book, Sparkles, CheckCircle } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Button } from './ui/button';
 
-export function PerfectFor({ className = "" }: { className?: string }) {
+export function PerfectFor({ className = "", onNext }: { className?: string; onNext?: () => void }) {
   const [ref, isInView] = useInView({ threshold: 0.3 });
 
   const perfectFor = [
@@ -77,12 +78,33 @@ export function PerfectFor({ className = "" }: { className?: string }) {
           ))}
         </div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-12 text-center"
+        >
+          <motion.div
+            animate={{ scale: [1, 1.08, 1] }}
+            transition={{ duration: 1.2, repeat: Infinity }}
+          >
+            <Button 
+              size="lg" 
+              type="button"
+              className="w-full max-w-2xl bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white text-3xl font-black py-10 px-16 rounded-full shadow-[0_10px_50px_rgba(22,163,74,0.9)] border-[6px] border-yellow-400 transform hover:scale-105 transition-transform"
+              onClick={onNext}
+            >
+              ✅ YES, THIS IS FOR ME! <CheckCircle className="ml-3 w-8 h-8" />
+            </Button>
+          </motion.div>
+        </motion.div>
+
         {/* Bottom Image Banner */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="relative rounded-2xl overflow-hidden shadow-2xl"
+          transition={{ duration: 0.8, delay: 1 }}
+          className="relative rounded-2xl overflow-hidden shadow-2xl mt-8"
         >
           <ImageWithFallback
             src="https://images.unsplash.com/photo-1761673271363-6efe71f08d18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGZyZXNoJTIwYmF0aHJvb218ZW58MXx8fHwxNzY1ODk3NjM0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
@@ -93,7 +115,7 @@ export function PerfectFor({ className = "" }: { className?: string }) {
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={isInView ? { scale: 1, opacity: 1 } : {}}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
               className="text-center text-white px-4"
             >
               <h3 className="mb-4">

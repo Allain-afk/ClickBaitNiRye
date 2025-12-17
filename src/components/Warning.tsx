@@ -2,8 +2,9 @@ import { motion } from 'motion/react';
 import { useInView } from './hooks/useInView';
 import { AlertTriangle, MessageCircle, TrendingUp } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Button } from './ui/button';
 
-export function Warning({ className = "" }: { className?: string }) {
+export function Warning({ className = "", onNext }: { className?: string; onNext?: () => void }) {
   const [ref, isInView] = useInView({ threshold: 0.3 });
 
   return (
@@ -124,6 +125,27 @@ export function Warning({ className = "" }: { className?: string }) {
                 </p>
               </motion.div>
             </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 1 }}
+            className="mt-12 text-center"
+          >
+            <motion.div
+              animate={{ scale: [1, 1.08, 1] }}
+              transition={{ duration: 1.2, repeat: Infinity }}
+            >
+              <Button 
+                size="lg" 
+                type="button"
+                className="w-full max-w-2xl bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black text-3xl font-black py-10 px-16 rounded-full shadow-[0_10px_50px_rgba(234,179,8,0.9)] border-[6px] border-red-600 transform hover:scale-105 transition-transform"
+                onClick={onNext}
+              >
+                ⚠️ I ACCEPT THE RISK! <AlertTriangle className="ml-3 w-8 h-8" />
+              </Button>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

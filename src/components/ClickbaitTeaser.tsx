@@ -1,9 +1,10 @@
 import { motion } from 'motion/react';
 import { useInView } from './hooks/useInView';
-import { Star, TrendingUp, Users, Sparkles, Clock, AlertCircle } from 'lucide-react';
+import { Star, TrendingUp, Users, Sparkles, Clock, AlertCircle, ArrowRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { Button } from './ui/button';
 
-export function ClickbaitTeaser({ className = "" }: { className?: string }) {
+export function ClickbaitTeaser({ className = "", onNext }: { className?: string; onNext?: () => void }) {
   const [ref, isInView] = useInView({ threshold: 0.3 });
   const [timeLeft, setTimeLeft] = useState({ minutes: 14, seconds: 59 });
 
@@ -145,9 +146,24 @@ export function ClickbaitTeaser({ className = "" }: { className?: string }) {
           <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-lg">
             <p className="text-gray-800">
               <span className="block mb-2">📢 THE SECRET IS REVEALED BELOW...</span>
-              <span className="text-red-600">Scroll now before they take this page down!</span>
+              <span className="text-red-600">Click below to see the PROOF!</span>
             </p>
           </div>
+
+          <motion.div
+            animate={{ scale: [1, 1.08, 1] }}
+            transition={{ duration: 1.2, repeat: Infinity }}
+            className="mt-12"
+          >
+            <Button 
+              size="lg" 
+              type="button"
+              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-3xl font-black py-10 px-16 rounded-full shadow-[0_10px_50px_rgba(59,130,246,0.9)] border-[6px] border-yellow-400 transform hover:scale-105 transition-transform"
+              onClick={onNext}
+            >
+              📊 SHOW ME THE PROOF! <ArrowRight className="ml-3 w-8 h-8" />
+            </Button>
+          </motion.div>
         </motion.div>
       </div>
     </section>

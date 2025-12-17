@@ -1,7 +1,8 @@
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Eye } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Button } from './ui/button';
 
-export function Hero() {
+export function Hero({ onReveal }: { onReveal?: () => void }) {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20 relative overflow-hidden">
       {/* Animated background blobs */}
@@ -82,9 +83,24 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex items-center justify-center gap-3 text-pink-600"
+          className="flex flex-col items-center justify-center gap-8 text-pink-600 mt-8"
         >
-          <span className="font-bold">⚠️ Click NOW Before We RUN OUT! ⚠️</span>
+          <span className="font-bold text-xl">⚠️ Click NOW Before We RUN OUT! ⚠️</span>
+          
+          <motion.div
+            animate={{ scale: [1, 1.08, 1] }}
+            transition={{ duration: 1.2, repeat: Infinity }}
+            className="w-full max-w-2xl"
+          >
+            <Button 
+              size="lg" 
+              type="button"
+              className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white text-3xl font-black py-10 px-16 rounded-full shadow-[0_10px_50px_rgba(220,38,38,0.9)] border-[6px] border-yellow-400 animate-pulse transform hover:scale-105 transition-transform"
+              onClick={onReveal}
+            >
+              🔥 REVEAL THE SECRET NOW! 🔥
+            </Button>
+          </motion.div>
         </motion.div>
       </motion.div>
     </section>

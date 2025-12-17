@@ -19,7 +19,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-blue-50 overflow-x-hidden pb-32">
+    <div className="min-h-screen bg-gradient-to-b from-pink-50 via-white to-blue-50 overflow-x-hidden">
       <AnimatePresence mode="wait">
         {step === 0 && (
           <motion.div
@@ -29,7 +29,7 @@ export default function App() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Hero />
+            <Hero onReveal={nextStep} />
           </motion.div>
         )}
 
@@ -42,7 +42,7 @@ export default function App() {
             transition={{ duration: 0.5 }}
             className="min-h-screen"
           >
-            <ClickbaitTeaser />
+            <ClickbaitTeaser onNext={nextStep} />
           </motion.div>
         )}
 
@@ -55,7 +55,7 @@ export default function App() {
             transition={{ duration: 0.5 }}
             className="min-h-screen"
           >
-            <Warning />
+            <Warning onNext={nextStep} />
           </motion.div>
         )}
 
@@ -68,7 +68,7 @@ export default function App() {
             transition={{ duration: 0.5 }}
             className="min-h-screen"
           >
-            <PerfectFor />
+            <PerfectFor onNext={nextStep} />
           </motion.div>
         )}
 
@@ -85,54 +85,6 @@ export default function App() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Fixed Button */}
-      {step < 4 && (
-        <div className="fixed bottom-0 left-0 right-0 bg-white border-t-4 border-red-600 shadow-2xl p-4 z-[9999]">
-          <div className="max-w-md mx-auto">
-            {step === 0 && (
-              <Button 
-                size="lg" 
-                type="button"
-                className="w-full bg-red-600 hover:bg-red-700 text-white text-xl font-bold py-8 rounded-full shadow-lg border-4 border-white animate-pulse"
-                onClick={nextStep}
-              >
-                REVEAL THE SECRET <Eye className="ml-2 w-6 h-6" />
-              </Button>
-            )}
-            {step === 1 && (
-              <Button 
-                size="lg" 
-                type="button"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white text-xl font-bold py-8 rounded-full shadow-lg border-4 border-white"
-                onClick={nextStep}
-              >
-                SHOW ME THE PROOF <ArrowRight className="ml-2 w-6 h-6" />
-              </Button>
-            )}
-            {step === 2 && (
-              <Button 
-                size="lg" 
-                type="button"
-                className="w-full bg-yellow-500 hover:bg-yellow-600 text-black text-xl font-bold py-8 rounded-full shadow-lg border-4 border-black"
-                onClick={nextStep}
-              >
-                I ACCEPT THE RISK <AlertTriangle className="ml-2 w-6 h-6" />
-              </Button>
-            )}
-            {step === 3 && (
-              <Button 
-                size="lg" 
-                type="button"
-                className="w-full bg-green-600 hover:bg-green-700 text-white text-xl font-bold py-8 rounded-full shadow-lg border-4 border-white"
-                onClick={nextStep}
-              >
-                AM I ELIGIBLE? <CheckCircle className="ml-2 w-6 h-6" />
-              </Button>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   );
 }
